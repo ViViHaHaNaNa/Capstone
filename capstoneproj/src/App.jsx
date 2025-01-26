@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -6,7 +8,8 @@ function App() {
 
   return (
     <>
-      Lets Get Started with the capstone
+      <Header/>
+      <Footer/>
     </>
   )
 }
