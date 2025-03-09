@@ -1,31 +1,34 @@
 import Logo from "../assets/Logo.svg"
-export default function Footer() {
+import './styles.css'
+export function Footer() {
     return (
-        <footer>
-            <main className="footercontent">
-                <img src={Logo}></img>
-                <ul>
+        <footer className="footer">
+            <div>
+                <img src={Logo} className="footer-imgs"></img>
+            </div>
+            <div className="footer-content">
+                <ul className="footerlist">
                     <li>Doormat</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                 </ul>
-                <ul>
-                    <li>Doormat</li>
-                    <li>Doormat</li>
-                    <li>Doormat</li>
-                    <li>Doormat</li>
-                    <li>Doormat</li>
-                </ul>
-                <ul>
-                    <li>Doormat</li>
+                <ul className="footerlist">
+                    <li>Contact</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                     <li>Doormat</li>
                 </ul>
-            </main>
+                <ul className="footerlist">
+                    <li>Social Media Links</li>
+                    <li>Doormat</li>
+                    <li>Doormat</li>
+                    <li>Doormat</li>
+                    <li>Doormat</li>
+                </ul>
+            </div>
         </footer>
     )
 }
