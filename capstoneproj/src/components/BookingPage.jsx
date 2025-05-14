@@ -4,7 +4,7 @@ export function BookingPage(props) {
         <>
         <div className="booking-page">
             <h2 className="res">Make A Reservation</h2>
-            <BookingForm availableTimes={props.availableTimes}/>
+            <BookingForm availableTimes={props.availableTimes} onDateChange={props.onDateChange}/>
         </div>
         </>
     )
