@@ -9,6 +9,7 @@ import MenuSection from './components/MenuSection'
 import { BookingPage } from './components/BookingPage'
 import { fetchAPI, submitAPI } from './api'
 import Reservations from './components/Reservations'
+import { ConfirmedBooking } from './components/ConfirmedBooking'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -50,6 +51,7 @@ function App() {
         <Route path="/menu" element={<MenuSection/>}></Route>
         <Route path="/bookings" element = {<BookingPage availableTimes={availableTimes} onDateChange={handleDateChange} onReset={handleReset}/>}></Route>
         <Route path="/reservations" element = {<Reservations />}></Route>
+        <Route path="/confirmed" element = {<ConfirmedBooking />}></Route>
         {/* <Route path="/login" element={<Login></Login>}></Route> */}
         {/* <Route path="/reservations" element={<Reservation></Reservation>}></Route> */}
         {/* <Route path="/orderonline" element={<OrderOnline></OrderOnline>}></Route> */}

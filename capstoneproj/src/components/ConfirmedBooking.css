@@ -1,0 +1,31 @@
+.confirmedContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-top:2rem;
+}
+.viewRes{
+    background-color: #F4CE14;
+    color:black;
+    font-weight: bold;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    padding-right:1rem;
+    padding-left:1rem;
+    border:none;
+    border-radius:8px;
+}
+@media screen and (max-width: 428px) {
+    .confirmedContent{
+        font-size:0.5rem;
+    }
+    .viewRes{
+        font-size:0.5rem;
+    }
+    .check{
+        width:10px;
+        height:10px;
+    }
+}

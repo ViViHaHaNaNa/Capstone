@@ -1,10 +1,16 @@
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 import './ResForm.css'
 import { submitAPI } from '../api'
 
 export function BookingForm(props){
+    const navigate = useNavigate()
+    const goToConfirm = ()  => {
+            navigate("/confirmed")
+    }
+
     const [date,setDate] = useState("")
-    const [time,setTime] = useState("")
+    const [time,setTime] = useState(props.availableTimes[0])
     const [guest,setGuest] = useState(1)
     const [occasion,setOcassion] = useState("")
     function handleSubmit(e) {
@@ -17,9 +23,9 @@ export function BookingForm(props){
             time,
         }
         if(submitAPI(res)){
-            alert("Reservation made: ",date,guest,occasion,time);
+            goToConfirm()
         }else{
-            alert("Booking Aldready Exists")
+            alert("Booking Aldready Exists at this time")
         }
         setDate("")
         setTime("")
