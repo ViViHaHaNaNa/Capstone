@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import BookingPage from './BookingForm';
+import BookingPage from './BookingPage';
+import { BookingForm } from "./BookingForm";
 import { fetchAPI } from "../api";
 function initializeTimes() {
     return fetchAPI(new Date())
@@ -33,3 +34,31 @@ describe("Returns a new list of times based on selected date",() => {
 })
 
 
+test('date input field has correct attributes', () => {
+  const { getByLabelText } = render(<BookingForm />);
+  const inputField = getByLabelText(/resdate/i);
+  
+  expect(inputField).toHaveAttribute('required');
+  expect(inputField).toHaveAttribute('type', 'text'); // Change 'text' to the appropriate type
+});
+test('time input field has correct attributes', () => {
+  const { getByLabelText } = render(<BookingForm />);
+  const inputField = getByLabelText(/restime/i);
+  
+  expect(inputField).toHaveAttribute('required');
+  expect(inputField).toHaveAttribute('type', 'text'); // Change 'text' to the appropriate type
+});
+test('guest input field has correct attributes', () => {
+  const { getByLabelText } = render(<BookingForm />);
+  const inputField = getByLabelText(/resguest/i);
+  
+  expect(inputField).toHaveAttribute('required');
+  expect(inputField).toHaveAttribute('type', 'text'); // Change 'text' to the appropriate type
+});
+test('ocassion input field has correct attributes', () => {
+  const { getByLabelText } = render(<BookingForm />);
+  const inputField = getByLabelText(/resocc/i);
+  
+  expect(inputField).toHaveAttribute('required');
+  expect(inputField).toHaveAttribute('type', 'text'); // Change 'text' to the appropriate type
+});

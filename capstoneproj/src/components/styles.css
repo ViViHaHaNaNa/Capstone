@@ -369,12 +369,12 @@
 
 @media screen and (max-width: 428px) {
     .special{
-        margin-bottom:0%;
+        margin-bottom:1rem;
     }
     .food-products {
         grid-template-columns: 1fr;
         max-width:80%;
-        row-gap: 0rem;
+        row-gap: 0.5rem;
     }
     .product-image{
         height:133.68px;
@@ -401,12 +401,14 @@
         font-size: 0.8rem;
     }
     .product-card{
-        height:85%;
+        height:100%;
         margin-bottom:0rem;
     }
     .delivery-button{
         font-size:0.8rem;
         margin-bottom:0.2rem;
+        padding:0.2rem;
+        margin-top:0.2rem;
     }
 }
 
@@ -415,7 +417,7 @@
 .product-card {
     width: 100%; /* Make cards fill their grid cells */
     max-width: 17rem; /* Keep your original max width */
-    margin: 0 auto; /* Center cards in their cells */
+    margin: 0 auto;/* Center cards in their cells */
 }
 
 /*Food Section*/
@@ -441,6 +443,14 @@ footer {
 }
 .footerlist{
     list-style:none;
+
+}
+.footerlist a{
+    color:black;
+    text-decoration: none;
+}
+.footerlist a:hover{
+    color: #f4a261;
 }
 .footerimg{
     width:2rem;
