@@ -11,7 +11,7 @@ export default function MenuSection() {
         <div className="container-2">
             <div className="special">
                 <h2 className="special-header">This weeks Specials!</h2>
-                <button className="menu-button">Online Menu</button>
+                <button className="menu-button" aria-label="click to view menu">Online Menu</button>
             </div>
             <div className="food-products">
                 <FoodCard img={salad} name="Salad" price="$12.58"/>

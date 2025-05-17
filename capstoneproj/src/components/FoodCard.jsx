@@ -10,9 +10,9 @@ export function FoodCard(props){
                     <span className="product-price">{props.price}</span>
                 </div>
                 <p className="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.Placeholder do go crazy
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.Lorem ipsum dolor sit amet
                 </p>
-                <button className="delivery-button">
+                <button className="delivery-button" aria-label="Click to order">
                     Order for Delivery
                     <img src={time} alt="Time" className="delivery-icon"/>
                 </button>
